@@ -15,9 +15,15 @@
     <img src="img/key south logo.png" alt="Key South Logo">
     <div>
       <div class="social-media">
-        <a href="https://www.instagram.com/" target="_blank" class="instagram" aria-label="Instagram"></a>
-        <a href="https://www.youtube.com/" target="_blank" class="youtube" aria-label="YouTube"></a>
-        <a href="https://www.linkedin.com/" target="_blank" class="linkedin" aria-label="LinkedIn"></a>
+        <a href="https://www.instagram.com/" target="_blank" class="instagram" aria-label="Instagram">
+          <img src="/workspaces/gt2baller.github.io/img/instagram-icon.png" alt="instagram" style="width:42px;height:42px;">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="youtube" aria-label="YouTube">
+          <img src="/workspaces/gt2baller.github.io/img/youtube-icon.png" alt="youtube" style="width:42px;height:42px;">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" class="linkedin" aria-label="LinkedIn">
+          <img src="/workspaces/gt2baller.github.io/img/linkedin-icon.png" alt="linkedin" style="width:42px;height:42px;">
+        </a>
       </div>
       <h1>Key South - Music Composer</h1>
     </div>
@@ -36,7 +42,7 @@
     <h2>About Key South</h2>
     <img src="img/Profile.jpg" alt="Key South">
     <p>
-      Key South is a talented music composer with experience in creating soundtracks for films, commercials, and video games. Inspired by the likes of Hans Zimmer and Ludovico Einaudi, his compositions evoke emotion and create a vivid atmosphere for visual storytelling.
+      Key South is a talented music composer with experience in creating soundtracks for artists, films, commercials, and video games. Inspired by the likes of Hans Zimmer and Pharrell Williams, his compositions evoke emotion and create a vivid atmosphere for visual storytelling.
     </p>
     <p>Key South has collaborated with filmmakers and game developers from around the world, earning a reputation for his versatility and attention to detail. His unique blend of orchestral and electronic elements gives his music a distinctive, modern edge.</p>
     <div class="clear"></div>
@@ -45,6 +51,11 @@
   <section id="music">
     <div id="player">
       <h2>Music Portfolio</h2>
+      <!-- Add the now playing labels here -->
+      <div class="now-playing">
+        <span class="now-playing-label">Now Playing:</span>
+        <span id="playlist-name"></span>
+      </div>
       <iframe id="disco-playlist" name="disco-playlist" allowfullscreen frameborder="0" class="disco-embed" src="https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG&artwork=true&color=%2332B57C&theme=white" width="100%" height="395"></iframe>
       
       <div id="spinner-overlay">
@@ -55,18 +66,19 @@
     </div>
     <div id="playlist">
       <h2>Playlists</h2>
-      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Atmospheric</button>
-      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11829732?download=false&s=_jxXKNBkMp8c2e3zWLKqW4ic5bE%3AWToAkWa7&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Christmas Hip Hop</button>
-      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/13103224?download=false&s=bCD_LQ5-20HIkLSXLHfM93HNnNE%3AGht0GtI6&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Disco/Funk/EDM</button>
-      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Dramedy</button>
+      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG&artwork=true&color=%2332B57C&theme=white', 'Atmospheric')" class="playlist-button">Atmospheric</button>
+      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11829732?download=false&s=_jxXKNBkMp8c2e3zWLKqW4ic5bE%3AWToAkWa7&artwork=true&color=%2332B57C&theme=white', 'Christmas Hip Hop')" class="playlist-button">Christmas Hip Hop</button>
+      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/13103224?download=false&s=bCD_LQ5-20HIkLSXLHfM93HNnNE%3AGht0GtI6&artwork=true&color=%2332B57C&theme=white', 'Disco/Funk/EDM')" class="playlist-button">Disco/Funk/EDM</button>
+      <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white', 'Dramedy')" class="playlist-button">Dramedy</button>
       <!-- Add more playlist buttons here -->
     </div>
   </section>
   <br />
   <section id="contact">
-    <h2>Contact Key South</h2>
-    <p>Let's create something amazing together! Get in touch with Key South to discuss your project and explore the 
-      possibilities of bringing your vision to life through the power of music. Don't hesitate, reach out now!</p>
+    <div id="contact-form">
+      <h2>Contact Key South</h2>
+      <p>Let's create something amazing together! Get in touch with Key South to discuss your project and explore the
+        possibilities of bringing your vision to life through the power of music. Don't hesitate, reach out now!</p>
     <form action="https://formspree.io/f/xjvdodnz" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>  
@@ -80,13 +92,18 @@
       <div class="g-recaptcha" data-sitekey="6LdzvQolAAAAALzjyNTh4smL-ViNUldTHqeiOvYs"></div>
       <input type="submit" value="Submit">
     </form>
+    </div>
+    <div id="wordle">
+      <h3>Play while you listen</h3>
+      <iframe src="assets/Wordle.html" width="100%" height="600" frameborder="0"></iframe>
+    </div>
   </section>
   <footer>
     <p>&copy; 2023 Key South Music. All rights reserved.</p>
   </footer>
   <script>
     
-    function changePlaylist(newSrc) {
+    function changePlaylist(newSrc, playlistName) {
       var iframe = document.getElementById('disco-playlist');
       var spinnerOverlay = document.getElementById('spinner-overlay');
 
@@ -97,6 +114,9 @@
       };
 
       iframe.src = newSrc;
+
+      // Update the playlist name
+      document.getElementById('playlist-name').textContent = playlistName;
     }
 
     function adjustHeroSectionHeight() {
