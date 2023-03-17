@@ -3,27 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Composer Landing Page</title>
+  <title>Key South - Music Composer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: Arial, sans-serif;">
-  <header style="text-align: center; padding: 30px 0; background-color: #333; color: #fff;">
-    <h1>John Doe - Music Composer</h1>
+<body style="font-family: 'Poppins', Arial, sans-serif; background-color: #e0e0e0;">
+  <header style="text-align: center; padding: 30px 0; background-color: #111; color: #fff;">
+    <h1>Key South - Music Composer</h1>
   </header>
-  <nav style="display: flex; justify-content: space-around; background-color: #444; padding: 10px;">
+  <nav style="display: flex; justify-content: space-around; background-color: #333; padding: 10px;">
     <a href="#about" style="color: #fff; text-decoration: none;">About</a>
     <a href="#music" style="color: #fff; text-decoration: none;">Music</a>
     <a href="#contact" style="color: #fff; text-decoration: none;">Contact</a>
   </nav>
-  <section id="hero" style="background-image: url('path/to/hero-image.jpg'); background-size: cover; height: 80vh; display: flex; align-items: center; justify-content: center;">
+  <section id="hero" style="background-image: url('https://raw.githubusercontent.com/gt2baller/gt2baller.github.io/main/hero.png'); background-size: contain; background-repeat: no-repeat; background-position: center; height: 80vh; display: flex; align-items: center; justify-content: center;">
     <h2 style="color: #fff; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Creating Cinematic Soundscapes</h2>
   </section>
   <section id="about" style="padding: 30px;">
-    <h2>About John Doe</h2>
-    <img src="path/to/headshot.jpg" alt="John Doe" style="float: left; margin-right: 20px; width: 200px;">
+    <h2>About Key South</h2>
+    <img src="https://raw.githubusercontent.com/gt2baller/gt2baller.github.io/main/Profile.jpg" alt="Key South" style="float: left; margin-right: 20px; width: 200px; border-radius: 50%;">
     <p>
-      John Doe is a talented music composer with experience in creating soundtracks for films, commercials, and video games. Inspired by the likes of Hans Zimmer and Ludovico Einaudi, his compositions evoke emotion and create a vivid atmosphere for visual storytelling.
+      Key South is a talented music composer with experience in creating soundtracks for films, commercials, and video games. Inspired by the likes of Hans Zimmer and Ludovico Einaudi, his compositions evoke emotion and create a vivid atmosphere for visual storytelling.
     </p>
-    <p>John has collaborated with filmmakers and game developers from around the world, earning a reputation for his versatility and attention to detail. His unique blend of orchestral and electronic elements gives his music a distinctive, modern edge.</p>
+    <p>Key South has collaborated with filmmakers and game developers from around the world, earning a reputation for his versatility and attention to detail. His unique blend of orchestral and electronic elements gives his music a distinctive, modern edge.</p>
     <div style="clear: both;"></div>
   </section>
   <section id="music" style="padding: 30px;">
@@ -31,30 +34,30 @@
     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
   </section>
   <section id="contact" style="padding: 30px;">
-    <h2>Contact John Doe</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
-  	<input type="submit" value="Submit">
-	</form>
+    <h2>Contact Key South</h2>
+    <form style="display: flex; flex-direction: column; align-items: center;">
+      <label for="name" style="margin-bottom: 5px;">Name:</label>
+      <input type="text" id="name" name="name" required style="margin-bottom: 10px;">  <label for="email" style="margin-bottom: 5px;">Email:</label>
+      <input type="email" id="email" name="email" required style="margin-bottom: 10px;">
+  
+      <label for="message" style="margin-bottom: 5px;">Message:</label>
+      <textarea id="message" name="message" rows="5" cols="40" required style="margin-bottom: 10px;"></textarea>
+  
+      <input type="submit" value="Submit">
+    </form>
   </section>
-  <footer style="background-color: #333; color: #fff; text-align: center; padding: 20px;">
-    <p>&copy; 2023 John Doe Music. All rights reserved.</p>
+  <footer style="background-color: #111; color: #fff; text-align: center; padding: 20px;">
+    <p>&copy; 2023 Key South Music. All rights reserved.</p>
   </footer>
   <script>
     const anchors = document.querySelectorAll('a[href^="#"]');
-
     anchors.forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(anchor.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
   </script>
 </body>
 </html>
