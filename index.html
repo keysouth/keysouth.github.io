@@ -17,7 +17,7 @@
     <a href="#music" style="color: #fff; text-decoration: none;">Music</a>
     <a href="#contact" style="color: #fff; text-decoration: none;">Contact</a>
   </nav>
-  <section id="hero" style="background-image: url('https://raw.githubusercontent.com/gt2baller/gt2baller.github.io/main/hero.png'); background-size: contain; background-repeat: no-repeat; background-position: center; height: 80vh; display: flex; align-items: center; justify-content: center;">
+  <section id="hero" style="background-image: url('https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=85,format=auto/uploads/2020/09/Best-Epic-Music-Tracks.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center; display: flex; align-items: center; justify-content: center;">
     <h2 style="color: #fff; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Creating Cinematic Soundscapes</h2>
   </section>
   <section id="about" style="padding: 30px; background-color: #fff;">
@@ -50,6 +50,24 @@
     <p>&copy; 2023 Key South Music. All rights reserved.</p>
   </footer>
   <script>
+    
+    function adjustHeroSectionHeight() {
+      const heroSection = document.getElementById('hero');
+      const img = new Image();
+      img.src = heroSection.style.backgroundImage.slice(5, -2); // Extract the URL of the image from the inline style
+      img.onload = function() {
+        const imgWidth = this.width;
+        const imgHeight = this.height;
+        const aspectRatio = imgHeight / imgWidth;
+        const viewportWidth = window.innerWidth;
+        const sectionHeight = viewportWidth * aspectRatio;
+        heroSection.style.height = sectionHeight + 'px';
+      }
+    }
+
+    adjustHeroSectionHeight();
+    window.addEventListener('resize', adjustHeroSectionHeight);
+
     const anchors = document.querySelectorAll('a[href^="#"]');
     anchors.forEach(anchor => {
   anchor.addEventListener('click', (e) => {
