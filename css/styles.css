@@ -46,15 +46,15 @@ body {
   }
   
   header .social-media a.instagram {
-    background-image: url('../img/instagram-icon.png');
+    background-image: url('https://github.com/gt2baller/gt2baller.github.io/blob/main/img/instagram-icon.png');
   }
   
   header .social-media a.youtube {
-    background-image: url('../img/youtube-icon.png');
+    background-image: url('https://github.com/gt2baller/gt2baller.github.io/blob/main/img/youtube-icon.png');
   }
   
   header .social-media a.linkedin {
-    background-image: url('../img/linkedin-icon.png');
+    background-image: url('https://github.com/gt2baller/gt2baller.github.io/blob/main/img/linkedin-icon.png');
   }
   
   nav {
