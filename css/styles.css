@@ -68,7 +68,7 @@ body {
   
   .nav-button {
     color: #fff;
-    text-decoration: none !important;
+    text-decoration: none;
     display: flex;
     flex-grow: 1;
     height: 100%;
@@ -79,7 +79,6 @@ body {
   .nav-button:hover {
     background-color: #444;
     color: #d5d5d5;
-    text-decoration: underline;
     cursor: pointer;
   }
   
