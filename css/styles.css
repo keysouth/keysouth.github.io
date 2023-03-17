@@ -15,6 +15,7 @@ body {
     padding: 15px;
     background-color: #000000;
     color: #fff;
+    height: 90px; /* Adjust height to accommodate social media icons */
   }
   
   header img {
@@ -25,6 +26,35 @@ body {
   
   header h1 {
     margin-right: 15px;
+    font-size: 1.2rem; /* Adjust font size */
+  }
+  
+  header .social-media {
+    display: flex;
+    align-items: center;
+    height: 50%;
+  }
+  
+  header .social-media a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  header .social-media a.instagram {
+    background-image: url('img/instagram-icon.png');
+  }
+  
+  header .social-media a.youtube {
+    background-image: url('img/youtube-icon.png');
+  }
+  
+  header .social-media a.linkedin {
+    background-image: url('img/linkedin-icon.png');
   }
   
   nav {
