@@ -6,28 +6,42 @@
   <title>Key South - Music Composer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     .playlist-button {
+      display: block;
       width: 100%;
       padding: 12px;
-      background-color: #fff;
-      color: #e53946;
-      font-weight: bold;
+      font-size: 16px;
+      text-align: left;
+      text-decoration: none;
       border: none;
+      background-color: #333;
+      color: #fff;
       cursor: pointer;
-      /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-      transition: transform 0.2s;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .playlist-button:hover {
+      background-color: #e53946;
+      /* box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); */
+    }
+
+    .playlist-button + .playlist-button {
+      margin-top: 10px;
     }
     
-    .playlist-button:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .nav-button:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      background-color: #444;
+      color: #e53946;
+      text-decoration: underline;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -36,14 +50,14 @@
     <img src="img/key south logo.png" alt="Key South Logo" style="height: 75px; border-radius: 50%; margin-left: 15px;">
     <h1 style="margin-right: 15px;">Key South - Music Composer</h1>
   </header>  
-  <nav style="display: flex; justify-content: space-around; background-color: #333; padding: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <a href="#about" class="nav-button" style="color: #fff; text-decoration: none;">About</a>
-    <a href="#music" class="nav-button" style="color: #fff; text-decoration: none;">Music</a>
-    <a href="#contact" class="nav-button" style="color: #fff; text-decoration: none;">Contact</a>
+  <nav style="display: flex; justify-content: space-around; background-color: #333; padding: 5px; height: 40px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <a href="#about" class="nav-button" style="color: #fff; text-decoration: none; display: flex; flex-grow: 1; height: 100%; justify-content: center; align-items: center;">About</a>
+    <a href="#music" class="nav-button" style="color: #fff; text-decoration: none; display: flex; flex-grow: 1; height: 100%; justify-content: center; align-items: center;">Music</a>
+    <a href="#contact" class="nav-button" style="color: #fff; text-decoration: none; display: flex; flex-grow: 1; height: 100%; justify-content: center; align-items: center;">Contact</a>
   </nav>
   <section id="hero" style="background-image: url('img/Best-Epic-Music-Tracks.avif'); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-size: contain; background-repeat: no-repeat; background-position: center; display: flex; align-items: center; justify-content: center;">
     <h2 style="color: #fff; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-      <span style="background-color: rgba(0, 0, 0, 0.6); padding: 10px;">Creating Cinematic Soundscapes</span>
+      <span>Creating Cinematic Soundscapes</span>
     </h2>
   </section>  
   <section id="about" style="padding: 30px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
@@ -59,7 +73,12 @@
   <section id="music" style="padding: 30px; background-color: #fff; display: flex; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <div style="flex: 1; margin-right: 30px;">
       <h2>Music Portfolio</h2>
-      <iframe id="disco-playlist-11952059" name="disco-playlist-11952059" allowfullscreen frameborder="0" class="disco-embed" src="https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white" width="100%" height="395"></iframe>
+      <div id="spinner-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.8); z-index: 100;">
+        <div id="spinner" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+          <div style="border: 6px solid #f3f3f3; border-top: 6px solid #e53946; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;"></div>
+        </div>
+      </div>      
+      <iframe id="disco-playlist" name="disco-playlist" allowfullscreen frameborder="0" class="disco-embed" src="https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white" width="100%" height="395"></iframe>
     </div>
     <div style="flex: 1; max-height: 395px; overflow-y: scroll; overflow-x: hidden">
       <h2>Playlists</h2>
@@ -69,8 +88,9 @@
     </div>
   </section>
   <br />
-  <section id="contact" style="padding: 30px; background-color: #222">
+  <section id="contact" style="padding: 30px; background-color: #fff">
     <h2>Contact Key South</h2>
+    <p>Let's create something amazing together! Get in touch with Key South to discuss your project and explore the possibilities of bringing your vision to life through the power of music. Don't hesitate, reach out now!</p>
     <form action="https://formspree.io/f/xjvdodnz" method="POST" style="display: flex; flex-direction: column; align-items: center;">
       <label for="name" style="margin-bottom: 5px;">Name:</label>
       <input type="text" id="name" name="name" required style="margin-bottom: 10px;">  <label for="email" style="margin-bottom: 5px;">Email:</label>
@@ -86,9 +106,18 @@
     <p>&copy; 2023 Key South Music. All rights reserved.</p>
   </footer>
   <script>
-    function changePlaylist(url) {
-      const iframe = document.getElementById('disco-playlist');
-      iframe.src = url;
+    
+    function changePlaylist(newSrc) {
+      var iframe = document.getElementById('disco-playlist-11952059');
+      var spinnerOverlay = document.getElementById('spinner-overlay');
+
+      spinnerOverlay.style.display = 'block';
+
+      iframe.onload = function() {
+        spinnerOverlay.style.display = 'none';
+      };
+
+      iframe.src = newSrc;
     }
 
     function adjustHeroSectionHeight() {
