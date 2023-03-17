@@ -22,32 +22,32 @@
     <a href="#contact" class="nav-button">Contact</a>
   </nav>
   <section id="hero">
-    <h2 style="color: #fff; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+    <h2>
       <span>Creating Cinematic Soundscapes</span>
     </h2>
   </section>  
-  <section id="about" style="padding: 30px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <section id="about">
     <h2>About Key South</h2>
-    <img src="img/Profile.jpg" alt="Key South" style="float: left; margin-right: 20px; width: 200px; border-radius: 50%;">
+    <img src="img/Profile.jpg" alt="Key South">
     <p>
       Key South is a talented music composer with experience in creating soundtracks for films, commercials, and video games. Inspired by the likes of Hans Zimmer and Ludovico Einaudi, his compositions evoke emotion and create a vivid atmosphere for visual storytelling.
     </p>
     <p>Key South has collaborated with filmmakers and game developers from around the world, earning a reputation for his versatility and attention to detail. His unique blend of orchestral and electronic elements gives his music a distinctive, modern edge.</p>
-    <div style="clear: both;"></div>
+    <div class="clear"></div>
   </section>
   <br />
-  <section id="music" style="padding: 30px; background-color: #fff; display: flex; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <div style="position: relative; flex: 1; margin-right: 30px;">
+  <section id="music">
+    <div id="player">
       <h2>Music Portfolio</h2>
       <iframe id="disco-playlist" name="disco-playlist" allowfullscreen frameborder="0" class="disco-embed" src="https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white" width="100%" height="395"></iframe>
       
-      <div id="spinner-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.8); z-index: 100;">
-        <div id="spinner" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          <div style="border: 6px solid #f3f3f3; border-top: 6px solid #e53946; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;"></div>
+      <div id="spinner-overlay">
+        <div id="spinner">
+          <div></div>
         </div>
       </div>
     </div>
-    <div style="flex: 1; max-height: 395px; overflow-y: auto; overflow-x: hidden">
+    <div id="playlist">
       <h2>Playlists</h2>
       <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Dramedy</button>
       <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11829732?download=false&s=_jxXKNBkMp8c2e3zWLKqW4ic5bE%3AWToAkWa7&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Christmas Hip Hop</button>
@@ -55,23 +55,25 @@
     </div>
   </section>
   <br />
-  <section id="contact" style="padding: 30px; background-color: #fff">
+  <section id="contact">
     <h2>Contact Key South</h2>
-    <p>Let's create something amazing together! Get in touch with Key South to discuss your project and explore the possibilities of bringing your vision to life through the power of music. Don't hesitate, reach out now!</p>
-    <form action="https://formspree.io/f/xjvdodnz" method="POST" style="display: flex; flex-direction: column; align-items: center;">
-      <label for="name" style="margin-bottom: 5px;">Name:</label>
-      <input type="text" id="name" name="name" required style="margin-bottom: 10px;">  <label for="email" style="margin-bottom: 5px;">Email:</label>
-      <input type="email" id="email" name="email" required style="margin-bottom: 10px;">
+    <p>Let's create something amazing together! Get in touch with Key South to discuss your project and explore the 
+      possibilities of bringing your vision to life through the power of music. Don't hesitate, reach out now!</p>
+    <form action="https://formspree.io/f/xjvdodnz" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
       <input type="text" name="honeypot" id="honeypot" style="display:none;">
 
-      <label for="message" style="margin-bottom: 5px;">Message:</label>
-      <textarea id="message" name="message" rows="5" cols="40" required style="margin-bottom: 10px;"></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" cols="40" required></textarea>
       <!-- reCaptcha, just before the submit button -->
       <div class="g-recaptcha" data-sitekey="6LdzvQolAAAAALzjyNTh4smL-ViNUldTHqeiOvYs"></div>
       <input type="submit" value="Submit">
     </form>
   </section>
-  <footer style="background-color: #111; color: #fff; text-align: center; padding: 20px;">
+  <footer>
     <p>&copy; 2023 Key South Music. All rights reserved.</p>
   </footer>
   <script>
