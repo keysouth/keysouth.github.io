@@ -1,0 +1,194 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #e0e0e0;
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  header img {
+    height: 75px;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+  
+  header h1 {
+    margin-right: 15px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 5px;
+    height: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-button {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-button:hover {
+    background-color: #444;
+    color: #e53946;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  #hero {
+    background-image: url('img/Best-Epic-Music-Tracks.avif');
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #hero h2 {
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  #about {
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #about img {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  #music {
+    padding: 30px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #music div {
+    position: relative;
+    flex: 1;
+    margin-right: 30px;
+  }
+  
+  .playlist-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+    text-decoration: none;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .playlist-button:hover {
+    background-color: #e53946;
+  }
+  
+  .playlist-button + .playlist-button {
+    margin-top: 10px;
+  }
+  
+  #contact {
+    padding: 30px;
+    background-color: #fff;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+  @-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to   { opacity: 1; }
+}
+  
+  footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }  
+
+  /* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header img {
+        margin: 0 auto 15px;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    .nav-button {
+        flex: 1 1 50%;
+        text-align: center;
+        padding: 8px;
+    }
+    
+    #hero h2 {
+        font-size: 2rem;
+        padding: 20px;
+    }
+    
+    #about img {
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+    }
+    
+    #music {
+        flex-direction: column;
+    }
+    
+    #music div {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    #music div:last-child {
+        margin-bottom: 0;
+    }
+}
