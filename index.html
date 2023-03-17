@@ -7,7 +7,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
+    body {
+      -webkit-animation-delay: 0.1s;
+      -webkit-animation-name: fontfix;
+      -webkit-animation-duration: 0.1s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: linear;
+    }
+
+    @-webkit-keyframes fontfix {
+        from { opacity: 1; }
+        to   { opacity: 1; }
+    }
+
     .playlist-button {
       display: block;
       width: 100%;
@@ -71,16 +85,17 @@
   </section>
   <br />
   <section id="music" style="padding: 30px; background-color: #fff; display: flex; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <div style="flex: 1; margin-right: 30px;">
+    <div style="position: relative; flex: 1; margin-right: 30px;">
       <h2>Music Portfolio</h2>
+      <iframe id="disco-playlist" name="disco-playlist" allowfullscreen frameborder="0" class="disco-embed" src="https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white" width="100%" height="395"></iframe>
+      
       <div id="spinner-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.8); z-index: 100;">
         <div id="spinner" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
           <div style="border: 6px solid #f3f3f3; border-top: 6px solid #e53946; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;"></div>
         </div>
-      </div>      
-      <iframe id="disco-playlist" name="disco-playlist" allowfullscreen frameborder="0" class="disco-embed" src="https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white" width="100%" height="395"></iframe>
+      </div>
     </div>
-    <div style="flex: 1; max-height: 395px; overflow-y: scroll; overflow-x: hidden">
+    <div style="flex: 1; max-height: 395px; overflow-y: auto; overflow-x: hidden">
       <h2>Playlists</h2>
       <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Dramedy</button>
       <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11829732?download=false&s=_jxXKNBkMp8c2e3zWLKqW4ic5bE%3AWToAkWa7&artwork=true&color=%2332B57C&theme=white')" class="playlist-button">Christmas Hip Hop</button>
@@ -95,10 +110,12 @@
       <label for="name" style="margin-bottom: 5px;">Name:</label>
       <input type="text" id="name" name="name" required style="margin-bottom: 10px;">  <label for="email" style="margin-bottom: 5px;">Email:</label>
       <input type="email" id="email" name="email" required style="margin-bottom: 10px;">
-  
+      <input type="text" name="honeypot" id="honeypot" style="display:none;">
+
       <label for="message" style="margin-bottom: 5px;">Message:</label>
       <textarea id="message" name="message" rows="5" cols="40" required style="margin-bottom: 10px;"></textarea>
-  
+      <!-- reCaptcha, just before the submit button -->
+      <div class="g-recaptcha" data-sitekey="6LdzvQolAAAAALzjyNTh4smL-ViNUldTHqeiOvYs"></div>
       <input type="submit" value="Submit">
     </form>
   </section>
@@ -108,7 +125,7 @@
   <script>
     
     function changePlaylist(newSrc) {
-      var iframe = document.getElementById('disco-playlist-11952059');
+      var iframe = document.getElementById('disco-playlist');
       var spinnerOverlay = document.getElementById('spinner-overlay');
 
       spinnerOverlay.style.display = 'block';
@@ -139,11 +156,22 @@
 
     const anchors = document.querySelectorAll('a[href^="#"]');
     anchors.forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(anchor.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    /**
+     * Some light validation
+     */
+     const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+      const honeypot = document.getElementById('honeypot');
+      if (honeypot.value) {
+        e.preventDefault();
+      }
+    });
 });
   </script>
 </body>
