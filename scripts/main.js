@@ -93,7 +93,7 @@ const form = document.querySelector('form');
  * Load Page Content
  */
 function loadContent() {
-    fetch('content.json')
+    fetch('../configs/content.json')
       .then((response) => response.json())
       .then((content) => {
         document.title = content.title;
