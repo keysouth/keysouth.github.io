@@ -88,4 +88,48 @@ const form = document.querySelector('form');
     }
   });
 });
+
+/**
+ * Load Page Content
+ */
+function loadContent() {
+    fetch('content.json')
+      .then((response) => response.json())
+      .then((content) => {
+        document.title = content.title;
+        document.querySelector('header h1').textContent = content.header.h1;
+  
+        const navButtons = document.querySelectorAll('.nav-button');
+        navButtons[0].textContent = content.nav.about;
+        navButtons[1].textContent = content.nav.music;
+        navButtons[2].textContent = content.nav.contact;
+  
+        document.querySelector('#hero h2 span').textContent = content.hero.h2;
+  
+        const aboutSection = document.querySelector('#about');
+        aboutSection.querySelector('h2').textContent = content.about.h2;
+        aboutSection.querySelectorAll('p')[0].textContent = content.about.p1;
+        aboutSection.querySelectorAll('p')[1].textContent = content.about.p2;
+  
+        const musicSection = document.querySelector('#music');
+        musicSection.querySelector('#player h2').textContent = content.music.player.h2;
+        musicSection.querySelector('.now-playing-label').textContent = content.music.player.nowPlayingLabel;
+        musicSection.querySelector('#playlist h2').textContent = content.music.playlist.h2;
+  
+        const contactSection = document.querySelector('#contact');
+        contactSection.querySelector('#wordle h2').textContent = content.contact.wordle.h2;
+        contactSection.querySelector('#contact-form h2').textContent = content.contact.contactForm.h2;
+        contactSection.querySelector('#contact-form p').textContent = content.contact.contactForm.p;
+        contactSection.querySelector('label[for="name"]').textContent = content.contact.contactForm.labelName;
+        contactSection.querySelector('label[for="email"]').textContent = content.contact.contactForm.labelEmail
+        contactSection.querySelector('label[for="message"]').textContent = content.contact.contactForm.labelMessage;
+
+        document.querySelector('footer p').innerHTML = content.footer.p;
+      });
+  }
+  
+  document.addEventListener('DOMContentLoaded', loadContent);
+/**
+ * End Load Page Content
+ */
   
