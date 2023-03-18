@@ -30,7 +30,8 @@ body {
   
   header .social-media {
     display: flex;
-    align-items: right;
+    align-items: center; /* Add this to center align the items vertically */
+    justify-content: center; /* Add this to center align the items horizontally */
     height: 50%;
   }
   
