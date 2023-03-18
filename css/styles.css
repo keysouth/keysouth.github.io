@@ -130,10 +130,14 @@ body {
   
   #music #playlist {
     flex: 1; 
-    max-height: 395px; 
+    height: 450px; 
+  }
+  #music #playlist #playlist-container {
+    height: 100%; 
     overflow-y: auto; 
     overflow-x: hidden;
   }
+  
   /* Styles for now playing labels */
   .now-playing {
     display: flex;
