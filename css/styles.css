@@ -45,18 +45,6 @@ body {
     background-position: center;
   }
   
-  /* header .social-media a.instagram {
-    background-image: url('https://github.com/gt2baller/gt2baller.github.io/blob/main/img/instagram-icon.png');
-  }
-  
-  header .social-media a.youtube {
-    background-image: url('https://github.com/gt2baller/gt2baller.github.io/blob/main/img/youtube-icon.png');
-  }
-  
-  header .social-media a.linkedin {
-    background-image: url('https://github.com/gt2baller/gt2baller.github.io/blob/main/img/linkedin-icon.png');
-  } */
-  
   nav {
     justify-content: space-around;
     background-color: #333;
