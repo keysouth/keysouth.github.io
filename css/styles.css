@@ -118,7 +118,7 @@ body {
       transform: translateY(-20px);
       transition: opacity 0.5s, transform 0.5s;
     }
-    
+
     .menu-button {
       display: block;
       width: 100%;
@@ -127,8 +127,7 @@ body {
     .dropdown-container {
       display: none;
       flex-direction: column;
-      position: absolute;
-      background-color: #fff;
+      width: 100%;
       top: 100%;
       left: 0;
       right: 0;
