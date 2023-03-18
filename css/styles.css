@@ -81,6 +81,44 @@ body {
     color: #d5d5d5;
     cursor: pointer;
   }
+  .menu-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .dropdown-container {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  
+    .dropdown-container {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: #fff;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  
+    .dropdown-container a {
+      display: block;
+      padding: 8px 16px;
+    }
+  
+    .dropdown-container.active {
+      display: flex;
+    }
+  }
+  
   
   #hero {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -137,7 +175,7 @@ body {
     overflow-y: auto; 
     overflow-x: hidden;
   }
-  
+
   /* Styles for now playing labels */
   .now-playing {
     display: flex;

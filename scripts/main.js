@@ -128,6 +128,11 @@ function loadContent() {
       });
   }
   
+  document.getElementById("menu-button").addEventListener("click", function () {
+    const dropdownContainer = document.getElementById("dropdown-container");
+    dropdownContainer.classList.toggle("active");
+  });
+  
   document.addEventListener('DOMContentLoaded', loadContent);
 /**
  * End Load Page Content
