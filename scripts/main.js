@@ -126,14 +126,15 @@ function loadContent() {
 
         document.querySelector('footer p').innerHTML = content.footer.p;
       });
-  }
+}
   
-  document.getElementById("menu-button").addEventListener("click", function () {
+document.getElementById("menu-button").addEventListener("click", function () {
+    alert('test');
     const dropdownContainer = document.getElementById("dropdown-container");
     dropdownContainer.classList.toggle("active");
-  });
-  
-  document.addEventListener('DOMContentLoaded', loadContent);
+});
+
+document.addEventListener('DOMContentLoaded', loadContent);
 /**
  * End Load Page Content
  */

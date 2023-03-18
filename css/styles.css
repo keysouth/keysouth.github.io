@@ -85,6 +85,7 @@ body {
     display: none;
     background-color: transparent;
     border: none;
+    color: #fff;
     font-size: 24px;
     cursor: pointer;
   }
@@ -96,6 +97,7 @@ body {
   @media screen and (max-width: 768px) {
     .menu-button {
       display: block;
+      width: 100%;
     }
   
     .dropdown-container {
