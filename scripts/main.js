@@ -129,7 +129,6 @@ function loadContent() {
 }
   
 document.getElementById("menu-button").addEventListener("click", function () {
-    alert('test');
     const dropdownContainer = document.getElementById("dropdown-container");
     dropdownContainer.classList.toggle("active");
 });
