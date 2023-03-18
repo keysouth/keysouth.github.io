@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
+  <script src="scripts/main.js" defer></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
@@ -61,21 +62,14 @@
     <div id="playlist">
       <h2>Playlists</h2>
       <div id="playlist-container">
-        <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG&artwork=true&color=%2332B57C&theme=white', 'Atmospheric')" class="playlist-button">Atmospheric</button>
-        <button class="playlist-button">Cinematic</button>
-        <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/13103224?download=false&s=bCD_LQ5-20HIkLSXLHfM93HNnNE%3AGht0GtI6&artwork=true&color=%2332B57C&theme=white', 'Disco/Funk/EDM')" class="playlist-button">Disco/Funk/EDM</button>
-        <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/12270279?download=false&s=rlfSLMBDJLYv3Kfx3FXUrvyRrQo%3Aca11UXLg&artwork=true&color=%2332B57C&theme=white', 'Drama/Tension')" class="playlist-button">Drama/Tension</button>
-        <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white', 'Dramedy')" class="playlist-button">Dramedy</button>
-        <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/13106539?download=false&s=Ey5GXp0QbPynQ-3n0dIAWqPkhQE%3A9bG6RHqE&artwork=true&color=%2332B57C&theme=white', 'Hip Hop')" class="playlist-button">Hip Hop</button>
-        <button onclick="changePlaylist('https://ensource-one-llc.disco.ac/e/p/11829732?download=false&s=_jxXKNBkMp8c2e3zWLKqW4ic5bE%3AWToAkWa7&artwork=true&color=%2332B57C&theme=white', 'Holiday Ads')" class="playlist-button">Holiday Ads</button>
-        <!-- Add more playlist buttons here -->
+        <!-- Playlist buttons will be generated here -->
       </div>
     </div>
   </section>
   <br />
   <section id="contact">
     <div id="wordle">
-      <h3>Play while you listen</h3>
+      <h2>Play while you listen</h2>
       <iframe src="https://www.nytimes.com/games/wordle/index.html" width="100%" height="600" frameborder="0"></iframe>
     </div>
     <div id="contact-form">
@@ -100,60 +94,5 @@
   <footer>
     <p>&copy; 2023 Key South Music. All rights reserved.</p>
   </footer>
-  <script>
-    
-    function changePlaylist(newSrc, playlistName) {
-      var iframe = document.getElementById('disco-playlist');
-      var spinnerOverlay = document.getElementById('spinner-overlay');
-
-      spinnerOverlay.style.display = 'block';
-
-      iframe.onload = function() {
-        spinnerOverlay.style.display = 'none';
-      };
-
-      iframe.src = newSrc;
-
-      // Update the playlist name
-      document.getElementById('playlist-name').textContent = playlistName;
-    }
-
-    function adjustHeroSectionHeight() {
-      const heroSection = document.getElementById('hero');
-      const img = new Image();
-      img.src = heroSection.style.backgroundImage.slice(5, -2); // Extract the URL of the image from the inline style
-      img.onload = function() {
-        const imgWidth = this.width;
-        const imgHeight = this.height;
-        const aspectRatio = imgHeight / imgWidth;
-        const viewportWidth = window.innerWidth;
-        const sectionHeight = viewportWidth * aspectRatio;
-        heroSection.style.height = sectionHeight + 'px';
-      }
-    }
-
-    adjustHeroSectionHeight();
-    window.addEventListener('resize', adjustHeroSectionHeight);
-
-    const anchors = document.querySelectorAll('a[href^="#"]');
-    anchors.forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-    /**
-     * Some light validation
-     */
-     const form = document.querySelector('form');
-    form.addEventListener('submit', function(e) {
-      const honeypot = document.getElementById('honeypot');
-      if (honeypot.value) {
-        e.preventDefault();
-      }
-    });
-});
-  </script>
 </body>
 </html>
