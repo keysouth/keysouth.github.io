@@ -18,11 +18,11 @@
     },
     "music": {
       "player": {
-        "h2": "Music Portfolio",
+        "h2": "Music Player",
         "nowPlayingLabel": "Now Playing:"
       },
       "playlist": {
-        "h2": "Playlists"
+        "h2": "Sample Playlists"
       }
     },
     "contact": {
