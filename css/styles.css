@@ -222,7 +222,9 @@ body {
       opacity: 1;
     }
   }
-  
+  #iframe-wrapper {
+    position: relative;
+  }
   #spinner-overlay {
     display: none; 
     position: absolute; 
