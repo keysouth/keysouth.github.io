@@ -1,431 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Key South — Sync Music Composer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Key South is a sync music composer creating cinematic soundscapes for TV, film, commercials, and trailers. Based in Atlanta, GA.">
-
-  <!-- Fonts -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#141512">
+  <title>Key South — Music that moves the picture.</title>
+  <meta name="description" content="Cinematic soul. Atlanta energy. Explore music by Key South for film, television, trailers and advertising. Listen to the catalog and discuss your next project.">
+  <meta property="og:title" content="Key South — Music that moves the picture.">
+  <meta property="og:description" content="Hip hop, orchestral and electronic music for visual storytelling. Composed in Atlanta.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/webclip.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/keysouth.css">
-
-  <!-- Icons -->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="images/webclip.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/studio.css">
+  <script src="scripts/studio.js" defer></script>
 </head>
 <body>
-
-  <!-- =========================================================
-       NAVBAR
-  ========================================================= -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="nav-brand">
-        <img src="images/key-south-logo.png" alt="Key South" class="nav-logo">
-        <span class="nav-name">Key South</span>
-      </a>
-      <div class="nav-links" id="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#music" class="nav-link">Music</a>
-        <!-- <a href="#credits" class="nav-link">Credits</a> -->
-        <a href="#contact" class="nav-cta">License My Music</a>
-      </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+  <a class="brand" href="#home" aria-label="Key South home"><span class="brand-mark" aria-hidden="true">k<span>↘</span></span><span>KEY SOUTH<span class="brand-caption">COMPOSER & PRODUCER</span></span></a>
+  <button class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">+</span></button>
+  <nav id="navigation" aria-label="Main navigation"><a href="#music">The music</a><a href="#about">The artist</a><a class="nav-contact" href="#contact">Let’s work together <span aria-hidden="true">↗</span></a></nav>
+</header>
+<main id="main">
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-art" aria-hidden="true"><div class="orb-halo"></div><svg id="sound-sculpture" viewBox="0 0 800 800"><defs><linearGradient id="copper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffdfb3"/><stop offset=".38" stop-color="#e99a61"/><stop offset=".68" stop-color="#985332"/><stop offset="1" stop-color="#311d16"/></linearGradient><radialGradient id="core"><stop stop-color="#5c3421"/><stop offset=".68" stop-color="#241b15"/><stop offset="1" stop-color="#141512"/></radialGradient></defs><circle cx="400" cy="400" r="290" fill="url(#core)"/><g id="sculpture-lines" fill="none" stroke="url(#copper)" stroke-width="1.1"></g><circle cx="400" cy="400" r="326" fill="none" stroke="#bd8c62" stroke-opacity=".13"/><path d="M30 400H770M400 30V770" stroke="#bd8c62" stroke-opacity=".09"/><circle cx="400" cy="74" r="3" fill="#edb383"/></svg><span class="art-coordinate">KS—001 / A STUDY IN RESONANCE</span></div>
+  <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> INDEPENDENT SOUND. UNMISTAKABLE FEELING.</p><h1 id="hero-title">Music that<br>moves the<br><em>picture.</em></h1><p class="hero-description">Cinematic soul. Atlanta energy.<br>Music for the scenes you don’t forget.</p><a class="button button-light" href="#music"><span class="play-icon" aria-hidden="true">▶</span> Find your soundtrack <span aria-hidden="true">↗</span></a></div>
+  <div class="hero-bottom"><span>FILM / TV / ADVERTISING / TRAILERS</span><a href="#music">SCROLL TO FEEL SOMETHING <span aria-hidden="true">↓</span></a><button id="motion-toggle" aria-pressed="false" aria-label="Pause visual animation">Pause motion <span aria-hidden="true">Ⅱ</span></button></div>
+</section>
+<div class="statement-strip"><span>HIP HOP ROOTS.</span><span class="spark" aria-hidden="true">✳</span><span>ORCHESTRAL SCALE.</span><span class="spark" aria-hidden="true">✳</span><span>ELECTRONIC INSTINCT.</span><span class="spark" aria-hidden="true">✳</span></div>
+<section class="music section" id="music" aria-labelledby="music-title">
+  <div class="section-top"><p class="eyebrow">01 / THE LISTENING ROOM</p><span class="small-note">CURATED BY KEY SOUTH</span></div>
+  <div class="section-heading"><h2 id="music-title">Every scene.<br><span class="muted">A different feeling.</span></h2><p>Start with a mood. Find the moment.<br>Explore eight sides of the Key South sound.</p></div>
+  <div class="listening-room">
+    <div class="collection-list" aria-label="Music collections" id="playlist-container"><p>Loading collections…</p></div>
+    <div class="collection-detail">
+      <div class="collection-art" id="collection-art" data-mood="0"><div class="collection-orbit" aria-hidden="true"></div><div class="collection-art-top"><span>KEY SOUTH / SELECTED SOUNDS</span><span id="collection-number">VOL. 01</span></div><div class="collection-art-bottom"><div><p id="collection-tags">TEXTURE / SPACE / EMOTION</p><h3 id="playlist-name">Atmospheric</h3></div><span class="collection-symbol" aria-hidden="true">↗</span></div></div>
+      <div class="player-heading"><span><span class="status-dot"></span> <span id="player-label">EXPLORE THE COLLECTION</span></span><a id="external-playlist" href="https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG&artwork=true&color=%2332B57C&theme=white" target="_blank" rel="noopener">Open in DISCO ↗</a></div>
+      <div class="player-shell" id="player-shell"><div id="player-placeholder"><span class="player-glyph" aria-hidden="true">≋</span><p id="collection-description">Room to breathe. Textures that pull you into the frame.</p><button id="load-player" class="button button-copper">Listen to Atmospheric <span aria-hidden="true">▶</span></button><span class="player-hint">Playback opens here. Sound starts when you press play.</span></div></div>
+      <p id="player-status" class="player-status" role="status" aria-live="polite"></p>
     </div>
-  </nav>
-
-  <!-- =========================================================
-       HERO
-  ========================================================= -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <p class="hero-eyebrow">Sync Music Composer</p>
-      <h1 class="hero-heading">Creating Cinematic<br>Soundscapes</h1>
-      <p class="hero-sub">Music crafted for the moment it's placed — from atmospheric landscapes to orchestral trap, built for TV, film, ads, and beyond.</p>
-      <div class="hero-actions">
-        <a href="#music" class="btn-primary">Hear My Music</a>
-        <a href="#contact" class="btn-ghost">License Inquiry</a>
-      </div>
-    </div>
-    <div class="hero-wave" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path class="wave-path-1" d="M0,40 C80,20 160,60 240,40 C320,20 400,60 480,40 C560,20 640,60 720,40 C800,20 880,60 960,40 C1040,20 1120,60 1200,40 C1280,20 1360,60 1440,40" fill="none" stroke="#d4a843" stroke-width="1.5"/>
-        <path class="wave-path-2" d="M0,55 C90,35 170,70 270,54 C370,38 450,70 550,55 C650,40 730,70 830,55 C930,40 1010,70 1110,55 C1210,40 1320,70 1440,55" fill="none" stroke="#d4a843" stroke-width="0.8"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       MUSIC PLAYER
-  ========================================================= -->
-  <section class="section" id="music">
-    <div class="container">
-      <p class="section-label">Explore My Catalog</p>
-      <h2 class="section-heading">Music</h2>
-      <div class="section-divider"></div>
-      <div class="music-grid">
-
-        <!-- Player -->
-        <div>
-          <div class="now-playing-bar">
-            <span class="now-playing-dot"></span>
-            <span class="now-playing-label">Now Playing:</span>
-            <span id="playlist-name">Atmospheric</span>
-          </div>
-          <div class="iframe-wrapper">
-            <div class="spinner-overlay" id="spinner-overlay">
-              <div class="spinner"></div>
-            </div>
-            <iframe
-              id="disco-playlist"
-              src="https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG&artwork=true&color=%2332B57C&theme=white"
-              width="100%"
-              height="420"
-              frameborder="0"
-              allowfullscreen
-              title="Key South Music Player">
-            </iframe>
-          </div>
-        </div>
-
-        <!-- Playlist selector -->
-        <div class="playlist-pills-wrap">
-          <p class="section-label" style="margin-bottom:1rem;">Sample Playlists</p>
-          <div class="playlist-pills" id="playlist-container"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       SYNC CREDITS (hidden until credits are ready)
-  ========================================================= -->
-  <section class="section section--alt" id="credits" style="display:none">
-    <div class="container">
-      <p class="section-label">Featured Placements</p>
-      <h2 class="section-heading">Heard In</h2>
-      <div class="section-divider"></div>
-      <p class="credits-intro">Music placed across television, film, advertising, and digital media.</p>
-      <div class="credits-grid">
-        <!-- ↓ Replace each card with your actual sync credits ↓ -->
-        <div class="credit-card">
-          <span class="credit-badge">TV</span>
-          <p class="credit-title">Project Title</p>
-          <p class="credit-detail">Network / Platform · Year</p>
-        </div>
-        <div class="credit-card">
-          <span class="credit-badge">Film</span>
-          <p class="credit-title">Project Title</p>
-          <p class="credit-detail">Studio / Festival · Year</p>
-        </div>
-        <div class="credit-card">
-          <span class="credit-badge">Ad</span>
-          <p class="credit-title">Brand Campaign</p>
-          <p class="credit-detail">Brand · Year</p>
-        </div>
-        <div class="credit-card">
-          <span class="credit-badge">Trailer</span>
-          <p class="credit-title">Project Title</p>
-          <p class="credit-detail">Studio · Year</p>
-        </div>
-        <div class="credit-card">
-          <span class="credit-badge">TV</span>
-          <p class="credit-title">Project Title</p>
-          <p class="credit-detail">Network · Year</p>
-        </div>
-        <div class="credit-card">
-          <span class="credit-badge">Digital</span>
-          <p class="credit-title">Project Title</p>
-          <p class="credit-detail">Brand / Platform · Year</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       ABOUT
-  ========================================================= -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="about-grid">
-
-        <div class="about-image-wrap">
-          <div class="about-glow"></div>
-          <img
-            src="images/Profile.jpg"
-            srcset="images/Profile-p-500.jpg 500w, images/Profile-p-800.jpg 800w, images/Profile.jpg 1407w"
-            sizes="(max-width: 640px) 240px, 300px"
-            alt="Key South"
-            class="about-image"
-            loading="lazy">
-        </div>
-
-        <div class="about-text">
-          <p class="section-label">The Artist</p>
-          <h2 class="section-heading">About Key South</h2>
-          <div class="section-divider"></div>
-          <p class="about-bio">
-            Key South is a music composer specializing in sync placements for TV, film, commercials, and trailers. Inspired by some of the greats, his compositions evoke emotion and create vivid atmosphere for visual storytelling — and most importantly, sound amazing.
-            <br><br>
-            Key's unique blend of hip hop, orchestral, and electronic elements gives his music a distinctive, modern edge — spanning atmospheric and cinematic to orchestral trap, dramedy, and beyond.
-          </p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/keysouthatl" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@ensourceTV" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       PHOODLE
-  ========================================================= -->
-  <section class="section section--alt" id="play">
-    <div class="container">
-      <div class="phoodle-wrap">
-        <p class="section-label">Take a Break</p>
-        <h2 class="section-heading">Play Phoodle</h2>
-        <div class="section-divider" style="margin:0 auto 1.5rem;"></div>
-        <p class="phoodle-intro">A music-themed Wordle. Play while you scout tracks.</p>
-        <div class="phoodle-frame">
-          <iframe src="https://www.phoodle.net/" width="100%" height="600" frameborder="0" title="Phoodle — Music Wordle" loading="lazy"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       CONTACT
-  ========================================================= -->
-  <section class="section" id="contact">
-    <div class="container">
-      <p class="section-label">Work With Me</p>
-      <h2 class="section-heading">License My Music</h2>
-      <div class="section-divider"></div>
-      <div class="contact-grid">
-
-        <!-- Form -->
-        <form id="contact-form" action="https://formspree.io/f/xjvdodnz" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="first-name">First Name</label>
-              <input class="form-input" type="text" id="first-name" name="first_name" placeholder="Jane" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="last-name">Last Name</label>
-              <input class="form-input" type="text" id="last-name" name="last_name" placeholder="Smith" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input class="form-input" type="email" id="email" name="email" placeholder="jane@studio.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="project-type">Project Type</label>
-            <select class="form-select" id="project-type" name="project_type">
-              <option value="">Select a project type…</option>
-              <option value="TV">TV / Streaming</option>
-              <option value="Film">Film</option>
-              <option value="Ad">Commercial / Ad</option>
-              <option value="Trailer">Trailer / Promo</option>
-              <option value="Video Game">Video Game</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about the project — mood, tempo, placement details…" required></textarea>
-          </div>
-          <button type="submit" class="form-submit" id="form-submit">Send Inquiry</button>
-          <div class="form-feedback" id="form-feedback"></div>
-        </form>
-
-        <!-- Info sidebar -->
-        <aside class="contact-info">
-          <p class="contact-info-heading">Get in Touch</p>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <span class="contact-info-label">Email</span>
-              <a href="mailto:keysouthatl@gmail.com" class="contact-info-value">keysouthatl@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <span class="contact-info-label">Location</span>
-              <span class="contact-info-value">Atlanta, GA</span>
-            </div>
-          </div>
-          <div class="contact-info-divider"></div>
-          <p class="section-label" style="margin-bottom:0.75rem;">Follow</p>
-          <div class="contact-social-links">
-            <a href="https://www.instagram.com/keysouthatl" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@ensourceTV" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-          </div>
-        </aside>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <a href="#" class="footer-brand">
-          <img src="images/key-south-logo.png" alt="Key South" class="footer-logo">
-          <span class="footer-name">Key South</span>
-        </a>
-        <nav class="footer-links">
-          <a href="#about"   class="footer-link">About</a>
-          <a href="#music"   class="footer-link">Music</a>
-          <!-- <a href="#credits" class="footer-link">Credits</a> -->
-          <a href="#contact" class="footer-link">Contact</a>
-        </nav>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/keysouthatl" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/@ensourceTV" class="footer-social" aria-label="YouTube" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-        </div>
-        <p class="footer-copy">© 2025 Ensource One LLC. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    /* ============================================================
-       Navbar — transparent → opaque on scroll
-    ============================================================ */
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    /* ============================================================
-       Mobile menu toggle
-    ============================================================ */
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks  = document.getElementById('nav-links');
-    navToggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      navToggle.classList.toggle('open', open);
-      navToggle.setAttribute('aria-expanded', String(open));
-      navbar.classList.toggle('menu-open', open);
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navbar.classList.remove('menu-open');
-      });
-    });
-
-    /* ============================================================
-       Playlist switcher
-    ============================================================ */
-    const playlists = [
-      { name: 'Atmospheric',        url: 'https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG&artwork=true&color=%2332B57C&theme=white' },
-      { name: 'Cinematic',          url: 'https://ensource-one-llc.disco.ac/e/p/12270279?download=false&s=rlfSLMBDJLYv3Kfx3FXUrvyRrQo%3Aca11UXLg&artwork=true&color=%2332B57C&theme=white' },
-      { name: 'Disco / Funk / EDM', url: 'https://ensource-one-llc.disco.ac/e/p/13103224?download=false&s=bCD_LQ5-20HIkLSXLHfM93HNnNE%3AGht0GtI6&artwork=true&color=%2332B57C&theme=white' },
-      { name: 'Dramedy',            url: 'https://ensource-one-llc.disco.ac/e/p/11952059?download=true&s=PCBsxYhggXeDeHOBtK6iMLl00fU%3ACLyS0keu&artwork=true&color=%2332B57C&theme=white' },
-      { name: 'Epic Hip Hop',       url: 'https://ensource-one-llc.disco.ac/e/p/15260649?download=false&s=bniffUbSvfjuHvCi7mziCF_RisI%3AGG8GU6pa&artwork=true&color=%2332B57C&theme=white' },
-      { name: 'Hip Hop',            url: 'https://ensource-one-llc.disco.ac/e/p/13106539?download=false&s=Ey5GXp0QbPynQ-3n0dIAWqPkhQE%3A9bG6RHqE&artwork=true&color=%2332B57C&theme=white' },
-      { name: 'Holiday Ads',        url: 'https://ensource-one-llc.disco.ac/e/p/11829732?download=false&s=_jxXKNBkMp8c2e3zWLKqW4ic5bE%3AWToAkWa7&artwork=true&color=%2332B57C&theme=white' },
-      { name: 'Songs',              url: 'https://ensource-one-llc.disco.ac/e/p/14679018?download=false&s=rsmh1HRBxKtQEjqcmnn_18sN4_Y%3AK6YktAVA&artwork=true&color=%2332B57C&theme=white' }
-    ];
-
-    const iframe         = document.getElementById('disco-playlist');
-    const spinnerOverlay = document.getElementById('spinner-overlay');
-    const playlistNameEl = document.getElementById('playlist-name');
-    const pillsContainer = document.getElementById('playlist-container');
-    let activeBtn = null;
-
-    function changePlaylist(url, name, btn) {
-      spinnerOverlay.classList.add('active');
-      iframe.onload = () => spinnerOverlay.classList.remove('active');
-      iframe.src = url;
-      playlistNameEl.textContent = name;
-      if (activeBtn) activeBtn.classList.remove('active');
-      activeBtn = btn;
-      btn.classList.add('active');
-    }
-
-    playlists.forEach((pl, i) => {
-      const btn = document.createElement('button');
-      btn.className = 'pill-btn';
-      btn.innerHTML = `${pl.name} <span class="pill-arrow">&#9654;</span>`;
-      btn.addEventListener('click', () => changePlaylist(pl.url, pl.name, btn));
-      if (i === 0) { btn.classList.add('active'); activeBtn = btn; }
-      pillsContainer.appendChild(btn);
-    });
-
-    /* ============================================================
-       Contact form — AJAX via Formspree
-    ============================================================ */
-    const form      = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('form-submit');
-    const feedback  = document.getElementById('form-feedback');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending\u2026';
-      feedback.className = 'form-feedback';
-      feedback.textContent = '';
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' }
-        });
-        if (res.ok) {
-          form.reset();
-          feedback.textContent = "Message sent \u2014 I'll be in touch soon.";
-          feedback.classList.add('success');
-        } else {
-          throw new Error();
-        }
-      } catch {
-        feedback.textContent = 'Something went wrong. Email me directly at keysouthatl@gmail.com';
-        feedback.classList.add('error');
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
-      }
-    });
-  </script>
-
+  </div>
+  <noscript><p>Listen to the <a href="https://ensource-one-llc.disco.ac/e/p/13102854?download=false&s=IC1NhP86jCyRryVDad3Dzv-uoXY%3AMqvPhbuG">Atmospheric collection on DISCO</a>. Enable JavaScript to browse all eight collections.</p></noscript>
+</section>
+<section class="artist section" id="about" aria-labelledby="artist-title">
+  <div class="artist-photo"><img src="images/Profile.jpg" srcset="images/Profile-p-500.jpg 500w, images/Profile-p-800.jpg 800w, images/Profile.jpg 1407w" sizes="(max-width: 760px) 90vw, 44vw" alt="Key South, composer and producer" loading="lazy" width="1407" height="1086"><span class="photo-caption">KEY SOUTH <span>ATLANTA, GA ↗</span></span></div>
+  <div class="artist-copy"><p class="eyebrow">02 / BEHIND THE SOUND</p><h2 id="artist-title">From the South.<br><em>For the story.</em></h2><p class="artist-lead">The weight of an orchestra.<br>The pulse of hip hop.<br>The feeling that stays with you.</p><p>I’m Key South, an Atlanta-based composer blending hip hop, orchestral and electronic music for visual storytelling. From quiet atmosphere to full-scale cinematic energy, I write for the emotion behind the image.</p><p>Film, television, advertising or a trailer’s biggest moment—let’s find its sound.</p><div class="text-links"><a href="https://www.instagram.com/keysouthatl" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/@ensourceTV" target="_blank" rel="noopener">YouTube ↗</a></div></div>
+</section>
+<section class="approach section" aria-labelledby="approach-title"><div class="section-top"><p class="eyebrow">03 / SOUND WITH INTENTION</p></div><div class="section-heading"><h2 id="approach-title">Built around<br><span class="muted">your moment.</span></h2><a class="text-link" href="#contact">Talk about your project ↗</a></div><div class="approach-grid"><article><span class="step">01 — DISCOVER</span><h3>Find the feeling.</h3><p>Browse the collections for the atmosphere, rhythm or energy your story needs.</p></article><article><span class="step">02 — CONNECT</span><h3>Set the scene.</h3><p>Share your brief, references and the tracks that caught your ear. Let’s talk about the fit.</p></article><article><span class="step">03 — CREATE</span><h3>Make it yours.</h3><p>Discuss licensing or a custom composition and bring the right sound to your picture.</p></article></div></section>
+<section class="contact section" id="contact" aria-labelledby="contact-title"><div class="contact-copy"><p class="eyebrow">04 / LET’S MAKE SOMETHING</p><h2 id="contact-title">Your vision.<br>My sound.<br><em>Let’s go.</em></h2><p>Have a scene in mind? A track you love?<br>Tell me what you’re making.</p><a class="email-link" href="mailto:keysouthatl@gmail.com">keysouthatl@gmail.com ↗</a><span class="contact-location">BASED IN ATLANTA. CREATING FOR EVERYWHERE.</span></div>
+<form id="contact-form" action="https://formspree.io/f/xjvdodnz" method="POST"><div class="form-row"><label>Your name<input name="name" autocomplete="name" placeholder="First and last name" required maxlength="200"></label><label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@studio.com" required maxlength="254"></label></div><label>What are you making?<select name="project_type" required><option value="" disabled selected>Select a project type</option>Film</option><option>TV / Streaming</option><option>Commercial / Advertising</option><option>Trailer / Promo</option><option>Video Game</option><option>Other</option></select></label><label>The vision<textarea name="message" placeholder="Tell me about the story, the feeling, your timeline, or a track that caught your ear…" required maxlength="10000" rows="4"></textarea></label><label class="honeypot" aria-hidden="true">Leave this blank<input name="_gotcha" tabindex="-1" autocomplete="off"></label><button class="button button-light" type="submit" id="form-submit">Send your brief <span aria-hidden="true">↗</span></button><p class="form-note">Your message goes directly to Key South.</p><p id="form-feedback" role="status" aria-live="polite"></p></form></section>
+</main>
+<footer><div class="footer-top"><a href="#home" class="footer-wordmark">KEY SOUTH<span>↗</span></a></div><div class="footer-bottom"><span>© <span id="year">2026</span> KEY SOUTH</span><span>MUSIC THAT MOVES THE PICTURE.</span><div><a href="https://www.phoodle.net/" target="_blank" rel="noopener">Take a break ↗</a><a href="#home">Back to top ↑</a></div></div></footer>
 </body>
 </html>
